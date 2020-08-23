@@ -1,0 +1,19 @@
+server:
+  port: 8686
+spring:
+  security:
+    user:
+      name: mingrui
+      password: 123456
+  application:
+    name: config-server
+  profiles:
+    # 使用本地配置文件
+    active: native
+
+  cloud:
+    config:
+      server:
+        native:
+          # 声明本地配置文件目录
+          search-locations: classpath:/config
